@@ -2,7 +2,52 @@
 <head></head>
 <body>
 
-    <script type="module" src="book.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/gun/gun.js"></script>
+    <script type="module" src="https://github.com/Paranauerj/dapp-pinata/blob/main/index.html"></script>
 
+    <script>
+        localStorage.clear();
+        var gun = Gun('https://gun-dapp-peer.herokuapp.com/gun');
+        
+    const book = new Book();
+
+        /*var books = gun.get('books');
+        var silmarilion = books.get(uniqid()).put({
+
+        });*/
+
+        /*var joao = gun.get('livro31');
+        joao.put({hello : "world1"});*/
+
+        /*function SendMessage(){
+            var message = document.getElementById("content").value;
+            if(message != ""){
+
+                gun.get('messages').get(uniqid()).put({
+                    sender: "RJ",
+                    content: message
+                });
+
+            }
+        }
+
+        gun.get('messages').map().on(function(val, key){
+            var messagesDiv = document.getElementById("messages");
+            // console.log(key, val);
+            messagesDiv.innerHTML += "(" + val.sender + ") : " + val.content + "<br/>";
+        });
+
+        gun.get('livro31').map().once(function(val, key){
+            //document.writeln(val + "<br/>");
+            console.log(key, val);
+        });*/
+
+        function uniqid(prefix = "", random = false) {
+            const sec = Date.now() * 1000 + Math.random() * 1000;
+            const id = sec.toString(16).replace(/\./g, "").padEnd(14, "0");
+            return `${prefix}${id}${random ? `.${Math.trunc(Math.random() * 100000000)}`:""}`;
+        }
+    
+    </script>
 </body>
 </html>
