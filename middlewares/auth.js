@@ -1,4 +1,4 @@
-import { user } from "../utils/gun";
+import { user } from "../utils/gun.js";
 
 function verifyAuthentication(){
     if(!user.is){

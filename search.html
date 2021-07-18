@@ -47,7 +47,7 @@
             <div class="container px-4 px-lg-5" style="padding-top: 18vh; padding-bottom: 3vh;">
                     <div class="jumbotron" style="background: gray;">
                         <h1 class="display-4">Books</h1>
-                        <p class="lead">See here our newest books or search for a new one</p>
+                        <p class="lead">Results of your search: "<script>document.write(new URL(window.location.href).searchParams.get("q"));</script>"</p>
                         <hr class="my-4">
                         <p>The searches are made by title*</p>
                         <p class="lead">
@@ -81,7 +81,7 @@
         <section class="projects-section bg-light" id="books">
             <div class="container px-4 px-lg-5">
                 <!-- Featured Project Row-->
-                <center><h3>Newest books</h3></center>
+                <center><h3>Results</h3></center>
                 <hr/>
                 <div id="booksList">
                     <!--<div class="row gx-0 mb-4 mb-lg-5 align-items-center">
@@ -113,6 +113,6 @@
     <script src="https://cdn.jsdelivr.net/npm/gun/gun.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/gun/sea.js"></script>
 
-    <script type="module" src="scripts/books.js"></script>
+    <script type="module" src="scripts/search.js"></script>
 </body>
 </html>

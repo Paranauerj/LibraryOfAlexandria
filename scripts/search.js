@@ -1,5 +1,5 @@
 import { user } from '../utils/gun.js';
-import { ListBooks } from '../services/bookServices.js';
+import { SearchBooks } from '../services/bookServices.js';
 import { verifyAuthentication } from '../middlewares/auth.js';
 
 verifyAuthentication();
@@ -9,7 +9,10 @@ document.getElementById('canLogout').innerHTML = user.is ? `<a class="nav-link" 
 
 localStorage.clear();
 
-ListBooks(function(book, key){
+var url = new URL(window.location.href);
+var query = url.searchParams.get("q");
+
+SearchBooks(query, function(book, key){
 
     document.getElementById('booksList').innerHTML += `
     

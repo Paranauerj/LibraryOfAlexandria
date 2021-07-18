@@ -2,6 +2,8 @@ import { Book } from '../classes/book.js';
 import { gun, user } from '../utils/gun.js';
 
 document.getElementById('isLogged').innerHTML = user.is ? `<a class="nav-link" href="myprofile.html">My profile</a>` : `<a class="nav-link" href="login.html">Login</a>`;
+document.getElementById('canLogout').innerHTML = user.is ? `<a class="nav-link" href="login.html">Logout</a>` : ``;
+
 localStorage.clear();
 
 // verifyAuthentication();

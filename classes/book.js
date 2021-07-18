@@ -1,12 +1,11 @@
 class Book {
-    constructor(name, isbn, author, description, pubDate, image, link){
+    constructor(name, author, description, pubDate, image, hash){
         this.name = name;
-        this.isbn = isbn;
         this.author = author;
         this.description = description;
         this.pubDate = pubDate;
         this.image = image;
-        this.link = link;
+        this.hash = hash;
     }
 }
 

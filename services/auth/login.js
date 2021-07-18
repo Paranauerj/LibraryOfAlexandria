@@ -4,8 +4,12 @@ function Auth(userInfo, callback){
     user.auth(userInfo.username, userInfo.password, callback);
 }
 
+function IsLogged(){
+    return user.is ? true : false;
+}
+
 function Logout(){
     user.leave();
 }
 
-export { Auth, Logout }
+export { Auth, Logout, IsLogged }
