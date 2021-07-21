@@ -1,4 +1,4 @@
-# dapp-pinata
+# LIBRARY OF ALEXANDRIA
 
 IPFS CID do projeto: QmWBgTPdQAztjWxuNkTCZ8Mc92owuBwG5aAoaj1uETWge9
 
