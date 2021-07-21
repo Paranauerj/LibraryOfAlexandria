@@ -1,4 +1,5 @@
 import { Auth, Logout } from '../services/auth/login.js';
+import { ValidateForm } from '../utils/validator.js';
 // import { GetInfo } from '../services/userServices.js';
 
 Logout();
@@ -6,13 +7,16 @@ Logout();
 var errLabel = document.getElementById('errorText');
 
 document.getElementById("loginForm").addEventListener('submit', function(){
-    var username = document.getElementById('username').value;
-    var password = document.getElementById('password').value;
 
-    if(username && password){
+    var formData = {
+        username : document.getElementById('username').value,
+        password : document.getElementById('password').value
+    };
+
+    if(ValidateForm()){
         Auth({
-            username: username,
-            password: password
+            username: formData.username,
+            password: formData.password
         }, function(at){
             // console.log(at);
             if(!at.err){

@@ -4,16 +4,16 @@ import { gun, user } from '../utils/gun.js';
 document.getElementById('isLogged').innerHTML = user.is ? `<a class="nav-link" href="myprofile.html">My profile</a>` : `<a class="nav-link" href="login.html">Login</a>`;
 document.getElementById('canLogout').innerHTML = user.is ? `<a class="nav-link" href="login.html">Logout</a>` : ``;
 
-localStorage.clear();
+// localStorage.clear();
 
 // verifyAuthentication();
 
-const book = new Book('Silmarilion', 332432, 'J.R.R. Tolkien', 'Awesome Book', null, 'https://lojasaraiva.vteximg.com.br/arquivos/ids/12114592/1008609237.jpg?v=637142268557100000', 'http://www.portugues.seed.pr.gov.br/arquivos/File/A_Historia_das_Silmarils.pdf');
+// const book = new Book('Silmarilion', 332432, 'J.R.R. Tolkien', 'Awesome Book', null, 'https://lojasaraiva.vteximg.com.br/arquivos/ids/12114592/1008609237.jpg?v=637142268557100000', 'http://www.portugues.seed.pr.gov.br/arquivos/File/A_Historia_das_Silmarils.pdf');
 /*var gun = Gun(config.peer);
 var user = gun.user().recall({ sessionStorage: true }); */
-var books = gun.get('books');
+// var books = gun.get('books');
 
-console.log(user);
+// console.log(user);
 
 /*var userInfo = {
     username: "Paranaue",

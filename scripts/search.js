@@ -7,12 +7,17 @@ verifyAuthentication();
 document.getElementById('isLogged').innerHTML = user.is ? `<a class="nav-link" href="myprofile.html">My profile</a>` : `<a class="nav-link" href="login.html">Login</a>`;
 document.getElementById('canLogout').innerHTML = user.is ? `<a class="nav-link" href="login.html">Logout</a>` : ``;
 
-localStorage.clear();
+// localStorage.clear();
 
 var url = new URL(window.location.href);
 var query = url.searchParams.get("q");
+var page = url.searchParams.get("p");
 
-SearchBooks(query, function(book, key){
+if(page < 1 || !page){
+    page = 1;
+}
+
+SearchBooks(query, page, function(book, key){
 
     document.getElementById('booksList').innerHTML += `
     
@@ -27,6 +32,7 @@ SearchBooks(query, function(book, key){
                 <div class="featured-text text-center text-lg-left">
                     <h4><a target="_blank" href="https://gateway.pinata.cloud/ipfs/` + book.hash + `">` + book.name + `</a></h4>
                     <p class="text-black-50 mb-0">` + book.description + `</p>
+                    <br/><p class="text-right"><small>Authored by ` + book.author + `, ` + book.pubDate + `</small></p>
                 </div>
             </div>
 
@@ -34,3 +40,8 @@ SearchBooks(query, function(book, key){
     
     `;
 });
+
+// Pagination
+var noParamsUrl = document.location.protocol +"//"+ document.location.hostname + document.location.pathname;
+document.getElementById('prev').href = noParamsUrl + "?q=" + query + "&p=" + (parseInt(page) - 1) + "#books";
+document.getElementById('next').href = noParamsUrl + "?q=" + query + "&p=" + (parseInt(page) + 1) + "#books";

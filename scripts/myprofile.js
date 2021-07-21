@@ -7,7 +7,7 @@ verifyAuthentication();
 document.getElementById('isLogged').innerHTML = user.is ? `<a class="nav-link" href="myprofile.html">My profile</a>` : `<a class="nav-link" href="login.html">Login</a>`;
 document.getElementById('canLogout').innerHTML = user.is ? `<a class="nav-link" href="login.html">Logout</a>` : ``;
 
-localStorage.clear();
+// localStorage.clear();
 
 $("#upload_file").submit(function(event) {
     var book = {

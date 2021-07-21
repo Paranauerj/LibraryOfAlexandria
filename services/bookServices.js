@@ -1,8 +1,30 @@
 import { gun, user } from '../utils/gun.js';
 import { uniqid } from '../utils/utils.js';
 
-function ListBooks(callback) {
-    gun.get('books').map(book => book != undefined ? book : undefined).once(callback);
+const pageSize = 8;
+
+function ListBooks(page, callback) {
+    if(!page || page < 1){
+        page = 1;
+    }
+
+    var count = -1;
+
+    // gun.get('books').map(book => book != undefined ? book : undefined).once(callback);
+    gun.get('books').map(function(book){
+        if(!book){
+            return undefined;
+        }
+
+        count++;
+        if(count >= (page * pageSize) - pageSize && count < page * pageSize){
+            return book;
+        }
+        else {
+            return undefined;
+        }
+
+    }).once(callback);
 }
 
 function CreateBook(book, callback){
@@ -37,13 +59,25 @@ function DeleteBook(key, callback){
 
 }
 
-function SearchBooks(query, callback){
+function SearchBooks(query, page, callback){
+    if(!page || page < 1){
+        page = 1;
+    }
+
+    var count = -1;
+
     gun.get('books').map(function(book){
         if(!book || !query){
             return undefined;
         }
         if(book.name.toLowerCase().indexOf(query.toLowerCase()) >= 0){
-            return book;
+            count++;
+            if(count >= (page * pageSize) - pageSize && count < page * pageSize){
+                return book;
+            }
+            else {
+                return undefined;
+            }
         }
         else {
             return undefined;
