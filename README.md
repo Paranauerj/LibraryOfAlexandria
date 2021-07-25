@@ -1,10 +1,16 @@
 # LIBRARY OF ALEXANDRIA
 
-IPFS CID do projeto: QmWBgTPdQAztjWxuNkTCZ8Mc92owuBwG5aAoaj1uETWge9
+## Open the project
+Every IPFS folder/file has a hash, known as [CID, Content Identifier](https://docs.ipfs.io/concepts/content-addressing/). To run these files, just choose some IPFS public gateway and paste the project's CID
 
-Links para abrir o projeto:
-https://cloudflare-ipfs.com/ipfs/QmWBgTPdQAztjWxuNkTCZ8Mc92owuBwG5aAoaj1uETWge9
-https://ipfs.io/ipfs/QmWBgTPdQAztjWxuNkTCZ8Mc92owuBwG5aAoaj1uETWge9
+CID: QmWBgTPdQAztjWxuNkTCZ8Mc92owuBwG5aAoaj1uETWge9
 
-Lista de gateways para testar conexão
-https://ipfs.github.io/public-gateway-checker/
+Links to open:
+- https://ipfs.io/ipfs/QmWBgTPdQAztjWxuNkTCZ8Mc92owuBwG5aAoaj1uETWge9
+- https://cloudflare-ipfs.com/ipfs/QmWBgTPdQAztjWxuNkTCZ8Mc92owuBwG5aAoaj1uETWge9
+
+
+List provided by IPFS
+- https://ipfs.github.io/public-gateway-checker/
+
+
