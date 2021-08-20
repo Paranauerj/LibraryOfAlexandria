@@ -6,7 +6,7 @@ Every IPFS folder/file has a hash, known as [CID, Content Identifier](https://do
 CID: QmWBgTPdQAztjWxuNkTCZ8Mc92owuBwG5aAoaj1uETWge9
 
 Links to open:
-- https://ipfs.io/ipfs/QmWBgTPdQAztjWxuNkTCZ8Mc92owuBwG5aAoaj1uETWge9
+- https://gateway.ipfs.io/ipfs/QmWBgTPdQAztjWxuNkTCZ8Mc92owuBwG5aAoaj1uETWge9
 - https://cloudflare-ipfs.com/ipfs/QmWBgTPdQAztjWxuNkTCZ8Mc92owuBwG5aAoaj1uETWge9
 
 
