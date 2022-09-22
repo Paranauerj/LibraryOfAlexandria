@@ -11,10 +11,10 @@ document.write(`
     <title>Library of Alexandria</title>
 
     <link rel="icon" type="image/x-icon" href="bootstrap/styles/assets/img/favicon.ico" />
-    <link rel="stylesheet" href="bootstrap/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="bootstrap/bootstrap.min.css">
 
     <!-- Font Awesome icons (free version)-->
-    <script src="bootstrap/styles/js/fontawesome.js" crossorigin="anonymous"></script>
+    <script src="bootstrap/styles/js/fontawesome.js"></script>
     
     <!-- Google fonts-->
     <link href="bootstrap/styles/css/googlefonts.css" rel="stylesheet" />
